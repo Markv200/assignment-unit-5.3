@@ -30,10 +30,17 @@ function showCollection(collection){
 showCollection(myCollection);
 
 function findByArtist(collection, artist){
-
+  match=[];
+  for (let Album of collection ){
+    if (Album.artist === artist){
+    match.push(Album);
+    }
+  }
+  return match
 }
 
-
+console.log(findByArtist(myCollection, 'Taylor Swift'));
+console.log(findByArtist(myCollection, 'The Weekend'));
 
 
 
